@@ -57,15 +57,15 @@
       top: 0; left: 0; right: 0;
       height: var(--nav-h);
       z-index: 300;
-      background: url('Assets/Section1/s1bg.png') center/cover no-repeat;
+      background: url('Assets/Section1/fixedheader-bg.png') center/cover no-repeat;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 32px;
     }
     .nav-left { display: flex; align-items: center; gap: 14px; }
     .nav-left .nav-logo { height: 34px; width: auto; }
     .nav-left .nav-country {
-      font-family: 'OwnersXBlack', sans-serif;
-      font-size: 12px; letter-spacing: 0.14em;
+      font-family: 'OwnersTrial-Medium', sans-serif;
+      font-size: 34px; letter-spacing: 0.14em;
       color: #F2F2F2; text-transform: uppercase;
     }
     .nav-right { display: flex; align-items: center; gap: 18px; }
@@ -172,18 +172,12 @@
     @keyframes mq-rtl { from { transform: translateX(0); }    to { transform: translateX(-50%); } }
     @keyframes mq-ltr { from { transform: translateX(-50%); } to { transform: translateX(0); }    }
 
-    .mq-sb-item {
-      display: inline-flex; align-items: center;
-      gap: 16px; padding: 0 24px; flex-shrink: 0; height: 100%;
-    }
-    .mq-sb-item .sb-logo { height: 26px; width: auto; }
-    .mq-sb-item .sb-sym  { width: 24px; height: 24px; }
+    .sb-logo { height: 26px; width: auto; flex-shrink: 0; }
+    .sb-sym  { width: 24px; height: 24px; flex-shrink: 0; }
+    .site-marquee .mq-track { gap: 16px; }
 
-    .mq-sp-item {
-      display: inline-flex; align-items: center;
-      padding: 0 28px; flex-shrink: 0; height: 100%;
-    }
-    .mq-sp-item img { height: 22px; width: auto; opacity: 0.8; filter: invert(1) brightness(2); }
+    .strip-sponsor .mq-track { gap: 48px; padding: 0 28px; }
+    .sp-logo { height: 22px; width: auto; flex-shrink: 0; opacity: 0.8; }
 
     .mq-city-item {
       display: inline-flex; align-items: center;
@@ -206,6 +200,7 @@
       color: rgba(242,242,242,0.4);
       border: 1px solid rgba(242,242,242,0.15);
       padding: 4px 10px; white-space: nowrap;
+      -webkit-text-stroke: 0.5px rgba(242,242,242,0.4);
       /* Overlay on top of the scrolling track */
       position: absolute;
       left: 28px;
@@ -381,46 +376,54 @@
 
   <div class="site-marquee">
     <div class="mq-track rtl">
-      <span class="mq-sb-item">
-        <img src="Assets/logos/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
-        <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
-        <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
-      </span>
-      <span class="mq-sb-item">
-        <img src="Assets/logos/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
-        <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
-        <img src="Assets/symbols/molecule-black.svg"    class="sb-sym" alt="">
-      </span>
-      <span class="mq-sb-item">
-        <img src="Assets/logos/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
-        <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
-        <img src="Assets/symbols/heart-black.svg"       class="sb-sym" alt="">
-      </span>
-      <span class="mq-sb-item">
-        <img src="Assets/logos/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
-        <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
-        <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
-      </span>
-      <span class="mq-sb-item">
-        <img src="Assets/logos/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
-        <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
-        <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
-      </span>
-      <span class="mq-sb-item">
-        <img src="Assets/logos/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
-        <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
-        <img src="Assets/symbols/molecule-black.svg"    class="sb-sym" alt="">
-      </span>
-      <span class="mq-sb-item">
-        <img src="Assets/logos/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
-        <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
-        <img src="Assets/symbols/heart-black.svg"       class="sb-sym" alt="">
-      </span>
-      <span class="mq-sb-item">
-        <img src="Assets/logos/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
-        <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
-        <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
-      </span>
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
+      <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
+      <img src="Assets/symbols/molecule-black.svg"    class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
+      <img src="Assets/symbols/heart-black.svg"       class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
+      <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
+      <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
+      <img src="Assets/symbols/molecule-black.svg"    class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
+      <img src="Assets/symbols/heart-black.svg"       class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
+      <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
+      <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
+      <img src="Assets/symbols/molecule-black.svg"    class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
+      <img src="Assets/symbols/heart-black.svg"       class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
+      <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
+      <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
+      <img src="Assets/symbols/molecule-black.svg"    class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/basketball-black.svg" class="sb-sym" alt="">
+      <img src="Assets/symbols/heart-black.svg"       class="sb-sym" alt="">
+      <img src="Assets/logo/startupballlogo.svg" class="sb-logo" alt="STARTUP BALL">
+      <img src="Assets/symbols/asterisk-black.svg"   class="sb-sym" alt="">
+      <img src="Assets/symbols/star-black.svg"        class="sb-sym" alt="">
     </div>
   </div>
 
@@ -437,57 +440,59 @@
       <div class="strip strip-sponsor" id="strip-s1">
         <span class="strip-label">[ OUR SPONSORS ]</span>
         <div class="mq-track ltr">
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/aws.svg" alt="AWS"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/remote.svg" alt="Remote"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/notion.svg" alt="Notion"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/assembly.svg" alt="Assembly"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/startupdaily.svg" alt="Startup Daily"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/tidal.svg" alt="Tidal"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/thoughtworks.svg" alt="Thoughtworks"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/aws.svg" alt="AWS"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/remote.svg" alt="Remote"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/notion.svg" alt="Notion"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/assembly.svg" alt="Assembly"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/startupdaily.svg" alt="Startup Daily"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/tidal.svg" alt="Tidal"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/thoughtworks.svg" alt="Thoughtworks"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/aws.svg" alt="AWS"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/remote.svg" alt="Remote"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/notion.svg" alt="Notion"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/assembly.svg" alt="Assembly"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/startupdaily.svg" alt="Startup Daily"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/tidal.svg" alt="Tidal"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/thoughtworks.svg" alt="Thoughtworks"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/aws.svg" alt="AWS"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/remote.svg" alt="Remote"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/notion.svg" alt="Notion"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/assembly.svg" alt="Assembly"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/startupdaily.svg" alt="Startup Daily"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/tidal.svg" alt="Tidal"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/thoughtworks.svg" alt="Thoughtworks"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/aws.svg" alt="AWS"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/remote.svg" alt="Remote"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/notion.svg" alt="Notion"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/assembly.svg" alt="Assembly"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/startupdaily.svg" alt="Startup Daily"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/tidal.svg" alt="Tidal"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/thoughtworks.svg" alt="Thoughtworks"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/aws.svg" alt="AWS"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/remote.svg" alt="Remote"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/notion.svg" alt="Notion"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/assembly.svg" alt="Assembly"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/startupdaily.svg" alt="Startup Daily"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/tidal.svg" alt="Tidal"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/thoughtworks.svg" alt="Thoughtworks"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/aws.svg" alt="AWS"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/remote.svg" alt="Remote"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/notion.svg" alt="Notion"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/assembly.svg" alt="Assembly"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/startupdaily.svg" alt="Startup Daily"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/tidal.svg" alt="Tidal"></span>
-          <span class="mq-sp-item"><img src="Assets/sponsorheaderlogos/thoughtworks.svg" alt="Thoughtworks"></span>
+          <img src="Assets/sponsorheaderlogos/aws.svg" class="sp-logo" alt="AWS">
+          <img src="Assets/sponsorheaderlogos/remote.svg" class="sp-logo" alt="Remote">
+          <img src="Assets/sponsorheaderlogos/notion.svg" class="sp-logo" alt="Notion">
+          <img src="Assets/sponsorheaderlogos/assembly.svg" class="sp-logo" alt="Assembly">
+          <img src="Assets/sponsorheaderlogos/startupdaily.svg" class="sp-logo" alt="Startup Daily">
+          <img src="Assets/sponsorheaderlogos/tidal.svg" class="sp-logo" alt="Tidal">
+          <img src="Assets/sponsorheaderlogos/thoughtworks.svg" class="sp-logo" alt="Thoughtworks">
+          <img src="Assets/sponsorheaderlogos/wollemi.svg" class="sp-logo" alt="Wollemi">
+          <img src="Assets/sponsorheaderlogos/tractor.svg" class="sp-logo" alt="Tractor">
+          <img src="Assets/sponsorheaderlogos/zedlaw.svg" class="sp-logo" alt="Zedlaw">
+          <img src="Assets/sponsorheaderlogos/aws.svg" class="sp-logo" alt="AWS">
+          <img src="Assets/sponsorheaderlogos/remote.svg" class="sp-logo" alt="Remote">
+          <img src="Assets/sponsorheaderlogos/notion.svg" class="sp-logo" alt="Notion">
+          <img src="Assets/sponsorheaderlogos/assembly.svg" class="sp-logo" alt="Assembly">
+          <img src="Assets/sponsorheaderlogos/startupdaily.svg" class="sp-logo" alt="Startup Daily">
+          <img src="Assets/sponsorheaderlogos/tidal.svg" class="sp-logo" alt="Tidal">
+          <img src="Assets/sponsorheaderlogos/thoughtworks.svg" class="sp-logo" alt="Thoughtworks">
+          <img src="Assets/sponsorheaderlogos/wollemi.svg" class="sp-logo" alt="Wollemi">
+          <img src="Assets/sponsorheaderlogos/tractor.svg" class="sp-logo" alt="Tractor">
+          <img src="Assets/sponsorheaderlogos/zedlaw.svg" class="sp-logo" alt="Zedlaw">
+          <img src="Assets/sponsorheaderlogos/aws.svg" class="sp-logo" alt="AWS">
+          <img src="Assets/sponsorheaderlogos/remote.svg" class="sp-logo" alt="Remote">
+          <img src="Assets/sponsorheaderlogos/notion.svg" class="sp-logo" alt="Notion">
+          <img src="Assets/sponsorheaderlogos/assembly.svg" class="sp-logo" alt="Assembly">
+          <img src="Assets/sponsorheaderlogos/startupdaily.svg" class="sp-logo" alt="Startup Daily">
+          <img src="Assets/sponsorheaderlogos/tidal.svg" class="sp-logo" alt="Tidal">
+          <img src="Assets/sponsorheaderlogos/thoughtworks.svg" class="sp-logo" alt="Thoughtworks">
+          <img src="Assets/sponsorheaderlogos/wollemi.svg" class="sp-logo" alt="Wollemi">
+          <img src="Assets/sponsorheaderlogos/tractor.svg" class="sp-logo" alt="Tractor">
+          <img src="Assets/sponsorheaderlogos/zedlaw.svg" class="sp-logo" alt="Zedlaw">
+          <img src="Assets/sponsorheaderlogos/aws.svg" class="sp-logo" alt="AWS">
+          <img src="Assets/sponsorheaderlogos/remote.svg" class="sp-logo" alt="Remote">
+          <img src="Assets/sponsorheaderlogos/notion.svg" class="sp-logo" alt="Notion">
+          <img src="Assets/sponsorheaderlogos/assembly.svg" class="sp-logo" alt="Assembly">
+          <img src="Assets/sponsorheaderlogos/startupdaily.svg" class="sp-logo" alt="Startup Daily">
+          <img src="Assets/sponsorheaderlogos/tidal.svg" class="sp-logo" alt="Tidal">
+          <img src="Assets/sponsorheaderlogos/thoughtworks.svg" class="sp-logo" alt="Thoughtworks">
+          <img src="Assets/sponsorheaderlogos/wollemi.svg" class="sp-logo" alt="Wollemi">
+          <img src="Assets/sponsorheaderlogos/tractor.svg" class="sp-logo" alt="Tractor">
+          <img src="Assets/sponsorheaderlogos/zedlaw.svg" class="sp-logo" alt="Zedlaw">
+          <img src="Assets/sponsorheaderlogos/aws.svg" class="sp-logo" alt="AWS">
+          <img src="Assets/sponsorheaderlogos/remote.svg" class="sp-logo" alt="Remote">
+          <img src="Assets/sponsorheaderlogos/notion.svg" class="sp-logo" alt="Notion">
+          <img src="Assets/sponsorheaderlogos/assembly.svg" class="sp-logo" alt="Assembly">
+          <img src="Assets/sponsorheaderlogos/startupdaily.svg" class="sp-logo" alt="Startup Daily">
+          <img src="Assets/sponsorheaderlogos/tidal.svg" class="sp-logo" alt="Tidal">
+          <img src="Assets/sponsorheaderlogos/thoughtworks.svg" class="sp-logo" alt="Thoughtworks">
+          <img src="Assets/sponsorheaderlogos/wollemi.svg" class="sp-logo" alt="Wollemi">
+          <img src="Assets/sponsorheaderlogos/tractor.svg" class="sp-logo" alt="Tractor">
+          <img src="Assets/sponsorheaderlogos/zedlaw.svg" class="sp-logo" alt="Zedlaw">
         </div>
       </div>
+      <div class="strip-ph" id="ph-s1"></div>
       <div class="strip-ph" id="ph-s1"></div>
     </section>
 
@@ -504,7 +509,7 @@
               <input type="email" name="email" placeholder="youremail@domain.com" required>
               <button type="submit">Become a Baller</button>
             </form>
-            <p class="s2-smallprint">By joining you agree to subscribe to the Startup Ball newsletter and event updates.</p>
+            <p class="s2-smallprint">By joining you agree to subscribe to da-bench.com and luma.com/startupballaustralia.</p>
           </div>
         </div>
       </div>
